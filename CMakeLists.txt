@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.10)
+project(AdventOfCode2025
+        DESCRIPTION "Advent of Code 2025 Solutions"
+        LANGUAGES CXX)
+
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED True)
+
+# Compiling move semantics/references executables
+add_executable(day1 day1/day1.cpp)
