@@ -11,7 +11,7 @@ std::vector<std::pair<long, long>> parse_ranges(const std::string &range_str) {
     while (true) {
         end = range_str.find(',', start);
         if (end == std::string::npos) break;
-        std::string token = range_str.substr(start, end - start);
+        std::string token = range_str.substr(start, end);
         size_t dash_pos = token.find('-');
         long range_start = std::stol(token.substr(0, dash_pos));
         long range_end = std::stol(token.substr(dash_pos + 1));
