@@ -8,19 +8,15 @@ std::vector<std::pair<long, long>> parse_ranges(const std::string &range_str) {
     size_t start = 0;
     size_t end = 0;
 
-    while (end != std::string::npos) {
+    while (true) {
         end = range_str.find(',', start);
-        std::string token = range_str.substr(start, (end == std::string::npos) ? std::string::npos : end - start);
+        if (end == std::string::npos) break;
+        std::string token = range_str.substr(start, end - start);
         size_t dash_pos = token.find('-');
-        if (dash_pos != std::string::npos) {
-            long range_start = std::stol(token.substr(0, dash_pos));
-            long range_end = std::stol(token.substr(dash_pos + 1));
-            ranges.emplace_back(range_start, range_end);
-        } else {
-            long single_value = std::stol(token);
-            ranges.emplace_back(single_value, single_value);
-        }
-        start = (end == std::string::npos) ? end : end + 1;
+        long range_start = std::stol(token.substr(0, dash_pos));
+        long range_end = std::stol(token.substr(dash_pos + 1));
+        ranges.emplace_back(range_start, range_end);
+        start = end + 1;
     }
 
     return ranges;
