@@ -9,3 +9,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # Compiling move semantics/references executables
 add_executable(day1 day1/day1.cpp)
 add_executable(day2 day2/day2.cpp)
+add_executable(day3 day3/day3.cpp)
