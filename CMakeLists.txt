@@ -5,6 +5,7 @@ project(AdventOfCode2025
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
+include_directories(/opt/homebrew/include/eigen3)
 
 # Compiling move semantics/references executables
 add_executable(day1 day1/day1.cpp)
@@ -15,3 +16,5 @@ add_executable(day5 day5/day5.cpp)
 add_executable(day6 day6/day6.cpp)
 add_executable(day7 day7/day7.cpp)
 add_executable(day8 day8/day8.cpp)
+add_executable(day9 day9/day9.cpp)
+add_executable(day10 day10/day10.cpp)
