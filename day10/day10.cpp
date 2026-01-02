@@ -4,7 +4,6 @@
 #include <vector>
 #include <set>
 #include <map>
-#include <Eigen/Dense>
 
 int find_shortest_sequence(int target, 
           std::vector<int> &button_sets, 
